@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import BloodtypeIcon from "@mui/icons-material/Bloodtype";
 import MenuIcon from "@mui/icons-material/Menu";
+import Logo from '../../assets/logo.png';
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -27,10 +28,10 @@ const MenuBox = styled(Box)({
 });
 
 const MenuItems = [
-  { Name: "Home", Link: "/" },
-  { Name: "Products", Link: "#" },
-  { Name: "Portfolio", Link: "#" },
-  { Name: "Contact Us", Link: "#" },
+  { Name: "O Nas", Link: "#" },
+  { Name: "Informacje", Link: "#" },
+  { Name: "Zostań dawcą", Link: "#" },
+  { Name: "Kontakt", Link: "#"},
 ];
 
 const Navbar = () => {
