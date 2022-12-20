@@ -8,8 +8,7 @@ const ActualEvents = () => {
     return (
         <Box>
             <Box sx={{ display: "flex" }}>
-                <Typography variant="h3" color="red">AKTUALNE</Typography>
-                <Typography>&nbsp; &nbsp;</Typography>
+                <Typography variant="h3" color="red">AKTUALNE&nbsp; &nbsp;</Typography>
                 <Typography variant="h3">WYDARZENIA</Typography>
             </Box>
             <Grid container spacing={0}>
