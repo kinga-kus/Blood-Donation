@@ -5,12 +5,12 @@ import photo from '../../assets/image1.png';
 
 const Banner = () => {
     return (
-        <Box sx={{ border: "2px solid green", display: "inline-flex", width: "100%", marginTop: "66px"}}>
+        <Container sx={{ border: "2px solid green", display: "flex", marginTop: "66px" }}>
             <Box>
                 <img src={photo} alt="image"/>
             </Box>
-            <Box sx={{ height: 500, display: "flex", alignItems: "center", justifyContent: "center", marginLeft: "auto", marginRight: 0, textAlign: "right"  }}>
-                <Box sx={{ marginRight: "130px" }}>
+            <Box sx={{ height: 500, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "right"  }}>
+                <Box>
                     <Typography variant="h1" align="center">Centrum</Typography>
                     <Box sx={{ display: "flex" }}>
                         <Typography variant="h1" sx={{ color: "#FF0E00" }}>Krwio</Typography>
@@ -18,7 +18,7 @@ const Banner = () => {
                     </Box>
                 </Box>
             </Box>
-        </Box>
+        </Container>
     );
 };
 
