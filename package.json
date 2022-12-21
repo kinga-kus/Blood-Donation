@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://kinga-kus.github.io/Blood-Donation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
