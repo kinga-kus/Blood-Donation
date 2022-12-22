@@ -1,8 +1,8 @@
-## Blood Donation <img width="10%" src="./src/assets/logo.png" alt="Logo" />
+## Blood Donation
 A Blood Donation app for getting information and making registeration easier!
 
 ## Table of Contents
-- [Blood Donation ](#blood-donation-)
+- [Blood Donation](#blood-donation)
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
 - [Built with](#built-with)
@@ -13,7 +13,6 @@ A Blood Donation app for getting information and making registeration easier!
 
 ## About The Project
 The project Blood Donation is a web which enables people searching information about how to became a blood donor and online registeration for an apointment.
-
 
 ## Built with
 
