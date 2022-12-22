@@ -5,25 +5,25 @@ import ActualEvent3 from '../../assets/event3.png';
 
 
 const ActualEvents = () => {
-    return (
-        <Box>
-            <Box sx={{ display: "flex" }}>
-                <Typography variant="h3" color="red">AKTUALNE&nbsp; &nbsp;</Typography>
-                <Typography variant="h3">WYDARZENIA</Typography>
-            </Box>
-            <Grid container spacing={0}>
-                <Grid>
-                    <img src={ActualEvent1} alt="Actual event number 1" />
-                </Grid>
-                <Grid>
-                    <img src={ActualEvent2} alt="Actual event number 2" />
-                </Grid>
-                <Grid>
-                    <img src={ActualEvent3} alt="Actual event number 3" />
-                </Grid>
-            </Grid>
-        </Box>
-    );
+  return (
+    <Box>
+      <Box sx={{ display: "flex" }}>
+        <Typography variant="h3" color="red">AKTUALNE&nbsp; &nbsp;</Typography>
+        <Typography variant="h3">WYDARZENIA</Typography>
+      </Box>
+      <Grid container spacing={0}>
+        <Grid>
+          <img src={ActualEvent1} alt="Actual event number 1" />
+        </Grid>
+        <Grid>
+          <img src={ActualEvent2} alt="Actual event number 2" />
+        </Grid>
+        <Grid>
+          <img src={ActualEvent3} alt="Actual event number 3" />
+        </Grid>
+      </Grid>
+    </Box>
+  );
 };
 
 export default ActualEvents;
