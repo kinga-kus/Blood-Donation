@@ -20,10 +20,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-scripts": "^5.0.1",
 =======
     "react-scripts": "^2.1.3",
 >>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
+=======
+    "react-scripts": "^5.0.1",
+>>>>>>> 2542efc (Resolved merge conflict by incorporating both suggestions.)
     "styled-components": "^5.3.6",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
@@ -47,9 +51,14 @@
 >>>>>>> 4f2e96f (:lipstick: Modified README.md file)
 =======
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
 >>>>>>> 12207df (chore: Removed a modified file from pull request)
+=======
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+>>>>>>> 2542efc (Resolved merge conflict by incorporating both suggestions.)
   },
   "eslintConfig": {
     "extends": [
@@ -87,7 +96,12 @@
 =======
   },
   "devDependencies": {
+<<<<<<< HEAD
     "gh-pages": "^4.0.0"
 >>>>>>> 12207df (chore: Removed a modified file from pull request)
+=======
+    "gh-pages": "^4.0.0",
+    "prettier": "2.8.1"
+>>>>>>> 2542efc (Resolved merge conflict by incorporating both suggestions.)
   }
 }
