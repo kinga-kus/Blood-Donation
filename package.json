@@ -1,6 +1,5 @@
 {
   "name": "my-app",
-  "homepage": "https://kinga-kus.github.io/Blood-Donation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,6 +31,7 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+<<<<<<< HEAD
     "eject": "react-scripts eject",
 <<<<<<< HEAD
     "predeploy": "npm run build",
@@ -40,6 +40,9 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
 >>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
+=======
+    "eject": "react-scripts eject"
+>>>>>>> 4f2e96f (:lipstick: Modified README.md file)
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +61,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
   },
   "devDependencies": {
 <<<<<<< Updated upstream
@@ -70,5 +74,7 @@
 =======
     "gh-pages": "^4.0.0"
 >>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
+=======
+>>>>>>> 4f2e96f (:lipstick: Modified README.md file)
   }
 }

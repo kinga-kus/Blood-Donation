@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+## Blood Donation <img width="10%" src="./src/assets/logo.png" alt="Logo" />
+A Blood Donation app for getting information and making registeration easier!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Blood Donation ](#blood-donation-)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Built with](#built-with)
+- [Design](#design)
+- [Installation](#installation)
+- [Project Status](#project-status)
+- [Authors](#authors)
 
-## Available Scripts
+## About The Project
+The project Blood Donation is a web which enables people searching information about how to became a blood donor and online registeration for an apointment.
 
-In the project directory, you can run:
 
-### `npm start`
+## Built with
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Design
 
-### `npm test`
+Here You can see it in a Figma file <a href="https://www.figma.com/file/duToCPC6a9qlzfpcS7dGBi/Blood-Donation?t=4qSsS1EO3YRPxVRH-6"  target="_blank">here</a>.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Fast and easy registeration
+- Reliable source of information
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install Blood-Donation with npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  git clone https://github.com/kinga-kus/Blood-Donation
+  cd Blood-Donation
+  npm i
+  npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the project
 
-### `npm run eject`
+```bash
+  git clone https://github.com/kinga-kus/Blood-Donation
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Go to the project directory
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  cd Blood-Donation
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Install dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+  npm install
+```
 
-## Learn More
+Start the server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  npm run start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Status
+The project is under modification.
+
+## Authors
+
+- [@kinga-kus](https://www.github.com/kinga-kus)
+- [@adam-kostuch](https://www.github.com/adam-kostuch)
