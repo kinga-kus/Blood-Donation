@@ -19,7 +19,11 @@
     "@types/react-dom": "^18.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-scripts": "^5.0.1",
+=======
+    "react-scripts": "^2.1.3",
+>>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
     "styled-components": "^5.3.6",
     "typescript": "^4.9.3",
     "web-vitals": "^2.1.4"
@@ -29,8 +33,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+=======
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
+>>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
   },
   "eslintConfig": {
     "extends": [
@@ -51,8 +60,15 @@
     ]
   },
   "devDependencies": {
+<<<<<<< Updated upstream
     "eslint-config-prettier": "^8.5.0",
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
     "gh-pages": "^4.0.0",
     "prettier": "2.8.1"
+=======
+    "gh-pages": "^4.0.0"
+>>>>>>> 5c7cf6a (build(pages): setup predeploy for gh-pages)
   }
 }
