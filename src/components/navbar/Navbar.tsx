@@ -38,7 +38,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar sx={{ background: "black" }}>
+    <AppBar sx={{ background: "transparent", boxShadow: "none" }}>
       <StyledToolbar>
         <SocialBox>
           <BloodtypeIcon />
