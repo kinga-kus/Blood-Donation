@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 import './App.css';
-import Navbar from "./components/Navbar/Navbar";
-import Banner from "./components/Banner/Banner";
-import Main from "./components/Main/Main";
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Main from './components/Main';
 
 function App() {
   return (
     <>
-      <Navbar />
       <Banner />
       <Main />
     </>
