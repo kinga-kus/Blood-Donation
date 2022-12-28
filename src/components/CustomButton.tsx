@@ -7,7 +7,7 @@ interface ICustomButton {
   buttonText: string;
 }
 
-const CustomButtonWrapper: FC<ICustomButton> = ({
+const CustomButton: FC<ICustomButton> = ({
   backgroundColor,
   color,
   buttonText
@@ -40,4 +40,4 @@ const CustomButtonWrapper: FC<ICustomButton> = ({
   return <CustomButtonWrapper>{buttonText}</CustomButtonWrapper>;
 };
 
-export default CustomButtonWrapper;
+export default CustomButton;

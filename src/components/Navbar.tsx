@@ -12,7 +12,7 @@ import {
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 import MenuIcon from '@mui/icons-material/Menu';
 import logoImg from '../assets/logo.png';
-import CustomButtonWrapper from './CustomButtonWrapper';
+import CustomButton from './CustomButton';
 
 const NavLink = styled(Typography)(({ theme }) => ({
   fontSize: '14px',
@@ -87,7 +87,7 @@ const Navbar = () => {
         }}
       >
         <NavLink variant="body2">Zostań dawcą</NavLink>
-        <CustomButtonWrapper
+        <CustomButton
           backgroundColor="#0F1B4C"
           color="#fff"
           buttonText="Rejestracja"
