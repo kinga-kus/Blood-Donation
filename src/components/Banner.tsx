@@ -7,7 +7,7 @@ import {
   styled
 } from '@mui/material';
 import bloodDonationImg from '../assets/image1.png';
-import CustomButton from './CustomButton';
+import CustomButtonWrapper from './CustomButtonWrapper';
 import Navbar from './Navbar';
 
 const CustomBox = styled(Box)(({ theme }) => ({
@@ -59,7 +59,7 @@ const Banner = () => {
               Możesz uratować życie wielu osobom - zostań dawcą krwi. To nic nie
               kosztuje, a wystarczą tylko chęci!
             </Typography>
-            <CustomButton
+            <CustomButtonWrapper
               backgroundColor="#0F1B4C"
               color="#fff"
               buttonText="Więcej"

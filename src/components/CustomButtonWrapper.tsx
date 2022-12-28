@@ -12,7 +12,7 @@ const CustomButtonWrapper: FC<ICustomButton> = ({
   color,
   buttonText
 }) => {
-  const CustomButton = styled(Button)(({ theme }) => ({
+  const CustomButtonWrapper = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
     color: color,
     fontWeight: '700',
@@ -37,7 +37,7 @@ const CustomButtonWrapper: FC<ICustomButton> = ({
     }
   }));
 
-  return <CustomButton>{buttonText}</CustomButton>;
+  return <CustomButtonWrapper>{buttonText}</CustomButtonWrapper>;
 };
 
 export default CustomButtonWrapper;
