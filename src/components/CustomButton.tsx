@@ -1,13 +1,17 @@
 import { Button, styled } from '@mui/material';
 import React, { FC } from 'react';
 
-interface Props {
+interface ICustomButton {
   backgroundColor: string;
   color: string;
   buttonText: string;
 }
 
-const CustomButton: FC<Props> = ({ backgroundColor, color, buttonText }) => {
+const CustomButtonWrapper: FC<ICustomButton> = ({
+  backgroundColor,
+  color,
+  buttonText
+}) => {
   const CustomButton = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
     color: color,
@@ -36,4 +40,4 @@ const CustomButton: FC<Props> = ({ backgroundColor, color, buttonText }) => {
   return <CustomButton>{buttonText}</CustomButton>;
 };
 
-export default CustomButton;
+export default CustomButtonWrapper;
