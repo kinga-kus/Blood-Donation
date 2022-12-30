@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import AboutUs from './components/AboutUs';
 import ActualEvents from './components/ActualEvents';
 import WhyWorth from './components/WhyWorth';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutUs />
       <ActualEvents />
       <WhyWorth />
+      <Contact />
     </>
   );
 }
