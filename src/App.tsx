@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs';
 import ActualEvents from './components/ActualEvents';
 import WhyWorth from './components/WhyWorth';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ActualEvents />
       <WhyWorth />
       <Contact />
+      <Footer />
     </>
   );
 }
