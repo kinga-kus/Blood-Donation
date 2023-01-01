@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, styled, Typography } from '@mui/material';
 
-import CustomButton from './CustomButton';
+import CustomButton from '../CustomButton';
 
 const CustomBox = styled(Box)(({ theme }) => ({
   width: '60%',

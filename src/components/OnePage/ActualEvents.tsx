@@ -1,9 +1,9 @@
 import { Box, Typography, Container, styled } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
-import actualEvent1 from '../assets/event1.png';
-import actualEvent2 from '../assets/event2.png';
-import actualEvent3 from '../assets/event3.png';
+import actualEvent1 from '../../assets/event1.png';
+import actualEvent2 from '../../assets/event2.png';
+import actualEvent3 from '../../assets/event3.png';
 
 const EventsBox = styled(Box)(({ theme }) => ({
   display: 'flex',

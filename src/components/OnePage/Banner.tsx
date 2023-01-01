@@ -6,8 +6,8 @@ import {
   ButtonProps,
   styled
 } from '@mui/material';
-import bloodDonationImg from '../assets/image1.png';
-import CustomButton from './CustomButton';
+import bloodDonationImg from '../../assets/image1.png';
+import CustomButton from '../CustomButton';
 import Navbar from './Navbar';
 
 const CustomBox = styled(Box)(({ theme }) => ({

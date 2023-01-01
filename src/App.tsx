@@ -1,22 +1,17 @@
 import React from 'react';
+
+import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import Banner from './components/Banner';
-import AboutUs from './components/AboutUs';
-import ActualEvents from './components/ActualEvents';
-import WhyWorth from './components/WhyWorth';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import OnePage from './components/OnePage';
+import Operation from './components/Registeration/Operation';
 
 function App() {
   return (
-    <>
-      <Banner />
-      <AboutUs />
-      <ActualEvents />
-      <WhyWorth />
-      <Contact />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<OnePage />} />
+      <Route path="/rejestracja" element={<Operation />} />
+    </Routes>
   );
 }
 

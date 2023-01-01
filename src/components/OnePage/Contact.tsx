@@ -14,7 +14,7 @@ import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 
-import CustomButton from './CustomButton';
+import CustomButton from '../CustomButton';
 
 const CustomContainer = styled(Container)(({ theme }) => ({
   backgroundColor: '#17275F',
