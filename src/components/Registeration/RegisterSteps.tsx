@@ -53,19 +53,28 @@ const PersonalInfo = [
 const ContactInfo = ['Numer telefonu', 'E-mail'];
 
 const RegisterSteps = () => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setState({
-      ...state,
+  const handleChangeDonationOption = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setDonation({
+      ...donation,
       [event.target.name]: event.target.checked
     });
   };
 
-  const [state, setState] = React.useState({
+  interface IDonationOption {
+    krew: boolean;
+    osocze: boolean;
+    trombafereza: boolean;
+  }
+
+  const [donation, setDonation] = React.useState<IDonationOption>({
     krew: false,
     osocze: false,
     trombafereza: false
   });
-  const { krew, osocze, trombafereza } = state;
+
+  const { krew, osocze, trombafereza } = donation;
   const error = [krew, osocze, trombafereza].filter((i) => i).length !== 1;
 
   const [value, setValue] = React.useState<Dayjs | null>(
@@ -117,7 +126,7 @@ const RegisterSteps = () => {
                     control={
                       <Checkbox
                         checked={krew}
-                        onChange={handleChange}
+                        onChange={handleChangeDonationOption}
                         name="krew"
                       />
                     }
@@ -127,7 +136,7 @@ const RegisterSteps = () => {
                     control={
                       <Checkbox
                         checked={osocze}
-                        onChange={handleChange}
+                        onChange={handleChangeDonationOption}
                         name="osocze"
                       />
                     }
@@ -137,7 +146,7 @@ const RegisterSteps = () => {
                     control={
                       <Checkbox
                         checked={trombafereza}
-                        onChange={handleChange}
+                        onChange={handleChangeDonationOption}
                         name="trombafereza"
                       />
                     }
