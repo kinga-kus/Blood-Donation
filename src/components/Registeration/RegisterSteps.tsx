@@ -98,10 +98,7 @@ const RegisterSteps = () => {
     <Box sx={{ minHeight: '80vh' }}>
       <Container>
         <CustomBox>
-          <Stack
-            gap={2}
-            sx={{ display: 'flex', border: '1px solid red', width: 700 }}
-          >
+          <Stack gap={2} sx={{ display: 'flex', width: 700 }}>
             <Grid>
               <FormControl
                 required
