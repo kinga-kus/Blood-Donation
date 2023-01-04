@@ -20,7 +20,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import logoImg from '../../assets/logo.png';
 
 import CustomButton from '../CustomButton';
-import Operation from '../Registeration/Operation';
+import Operation from '../Registeration/RegisterSteps';
 
 const NavLink = styled(Link)(({ theme }) => ({
   fontSize: '14px',
