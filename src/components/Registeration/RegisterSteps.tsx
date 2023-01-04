@@ -98,7 +98,10 @@ const RegisterSteps = () => {
     <Box sx={{ minHeight: '80vh' }}>
       <Container>
         <CustomBox>
-          <Stack gap={2}>
+          <Stack
+            gap={2}
+            sx={{ display: 'flex', border: '1px solid red', width: 700 }}
+          >
             <Grid>
               <FormControl
                 required
@@ -179,7 +182,13 @@ const RegisterSteps = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Stack gap={2}>
+            <Stack
+              gap={2}
+              sx={{
+                display: 'flex',
+                flexFlow: 'row wrap'
+              }}
+            >
               {PersonalInfo.map((person) => (
                 <Grid>
                   <TextField
@@ -206,7 +215,13 @@ const RegisterSteps = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Stack gap={2}>
+            <Stack
+              gap={2}
+              sx={{
+                display: 'flex',
+                flexFlow: 'row wrap'
+              }}
+            >
               {ContactInfo.map((contact) => (
                 <Grid item xs={8}>
                   <TextField
