@@ -1,7 +1,10 @@
 import React from 'react';
 import { Box, Button, styled, Typography, List, ListItem } from '@mui/material';
 
+import { Link as MoreInfoLink, Route, Routes } from 'react-router-dom';
+
 import CustomButton from '../CustomButton';
+import MoreInformation from '../MoreInformation/MoreInformation';
 
 const CustomBox = styled(Box)(({ theme }) => ({
   width: '60%',
@@ -30,63 +33,70 @@ const BulletText = styled(Typography)(({ theme }) => ({
 
 const WhyWorth = () => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'left',
-        alignItems: 'left',
-        my: 10,
-        ml: 10
-      }}
-    >
-      <Typography
-        variant="h3"
+    <>
+      <Box
         sx={{
-          fontSize: '35px',
-          fontWeight: 'bold',
-          color: '#000339',
-          my: 3
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'left',
+          alignItems: 'left',
+          my: 10,
+          ml: 10
         }}
       >
-        Dlaczego warto?
-      </Typography>
-      <CustomBox>
         <Typography
-          variant="body2"
+          variant="h3"
           sx={{
-            fontSize: '16px',
-            fontWeight: 400,
-            color: '#5A6473',
-            textAlign: 'left'
+            fontSize: '35px',
+            fontWeight: 'bold',
+            color: '#000339',
+            my: 3
           }}
         >
-          Oddawanie krwi jest bezpiecznie i nie stanowi zagrożenia dla Twojego
-          zdrowia czy życia:
+          Dlaczego warto?
         </Typography>
-        <List
-          sx={{
-            ml: 3,
-            mb: 3,
-            listStyleType: 'disc',
-            '& .MuiListItem-root': {
-              display: 'list-item'
-            }
-          }}
-        >
-          {BulletListText.map((bullet) => (
-            <ListItem>
-              <BulletText>{bullet.text}</BulletText>
-            </ListItem>
-          ))}
-        </List>
-        <CustomButton
-          backgroundColor="#0F1B4C"
-          color="#fff"
-          buttonText="Więcej"
-        />
-      </CustomBox>
-    </Box>
+        <CustomBox>
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: '16px',
+              fontWeight: 400,
+              color: '#5A6473',
+              textAlign: 'left'
+            }}
+          >
+            Oddawanie krwi jest bezpiecznie i nie stanowi zagrożenia dla Twojego
+            zdrowia czy życia:
+          </Typography>
+          <List
+            sx={{
+              ml: 3,
+              mb: 3,
+              listStyleType: 'disc',
+              '& .MuiListItem-root': {
+                display: 'list-item'
+              }
+            }}
+          >
+            {BulletListText.map((bullet) => (
+              <ListItem>
+                <BulletText>{bullet.text}</BulletText>
+              </ListItem>
+            ))}
+          </List>
+          <MoreInfoLink to="/informacje">
+            <CustomButton
+              backgroundColor="#0F1B4C"
+              color="#fff"
+              buttonText="Więcej"
+            />
+          </MoreInfoLink>
+        </CustomBox>
+      </Box>
+      <Routes>
+        <Route path="/informacje" element={<MoreInformation />} />
+      </Routes>
+    </>
   );
 };
 
