@@ -5,14 +5,15 @@ import {
   styled,
   Container,
   List,
-  ListItem,
-  Button,
-  Backdrop
+  ListItem
 } from '@mui/material';
+
 import Navbar from '../OnePage/Navbar';
+import CannotBeADonorDialog from '../MoreInformation/CannotBeADonorDialog';
+import Footer from '../OnePage/Footer';
 
 import bloodTypes from '../../assets/bloodTypes.jpg';
-import bloodTesting from '../../assets/bloodTesting.jpg';
+import chocolateImage from '../../assets/chocolateImage.jpg';
 
 const CustomBox = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -61,11 +62,18 @@ const donorRequirements = [
   'Osoby wykonujące takie zawody jak: pilot, maszynista, kierowca autobusu, operator dźwigu, oraz pracujące na wysokości, uprawiające wspinaczkę, głębokie nurkowanie mogą powrócić do tych zajęć nie wcześniej niż 12 godz. po oddaniu krwi'
 ];
 
-const whoCannotBeADonor = [
+const whoCannotBeADonorShort = [
   'Nie mogą oddawać krwi osoby, które chorowały na wirusowe zapalenie wątroby (tzw. żółtaczkę zakaźną), nosiciele wirusa HIV oraz chorzy na AIDS. Krwi nie pobiera się od narkomanów, od osób mających kontakty seksualne z wieloma partnerami lub partnerkami, szczególnie znanymi od niedawna.',
   'Dawcami krwi nie powinni być osoby z aktywną lub przebytą poważną chorobą układu krążenia, układu nerwowego, układu pokarmowego, układu oddechowego, nerek, skóry (np. łuszczyca), układu immunologicznego, układu endokrynnego (np. cukrzyca, choroby tarczycy), tkanki łącznej.',
   'Nie można oddawać krwi zażywając leki (poza antykoncepcją hormonalną i niektórymi lekami na nadciśnienie).',
   'Dyskwalifikacją stałą objęci są kandydaci z chorobami krwi i układu krwiotwórczego...'
+];
+
+const afterBloodDonation = [
+  'posiłek regeneracyjny',
+  'zwolnienie z pracy w dniu oddania krwi',
+  'legitymację Honorowego Dawcy Krwi',
+  'bezpłatne wyniki badań'
 ];
 
 const Img = styled('img')({
@@ -97,8 +105,7 @@ const MoreInformation = () => {
               flexDirection: 'column',
               justifyContent: 'left',
               alignItems: 'left',
-              my: 10,
-              ml: 10
+              my: 10
             }}
           >
             <TitleText variant="h3">Skład i grupa krwi</TitleText>
@@ -125,8 +132,7 @@ const MoreInformation = () => {
               flexDirection: 'column',
               justifyContent: 'left',
               alignItems: 'left',
-              my: 10,
-              ml: 10
+              my: 10
             }}
           >
             <TitleText variant="h3">Kto może oddać krew?</TitleText>
@@ -202,8 +208,7 @@ const MoreInformation = () => {
               flexDirection: 'column',
               justifyContent: 'left',
               alignItems: 'left',
-              my: 10,
-              ml: 10
+              my: 10
             }}
           >
             <TitleText variant="h3">Kto NIE MOŻE oddać krew?</TitleText>
@@ -217,25 +222,53 @@ const MoreInformation = () => {
                 }
               }}
             >
-              {whoCannotBeADonor.map((cannot) => (
+              {whoCannotBeADonorShort.map((cannot) => (
                 <ListItem>
                   <DesctriptionText>{cannot}</DesctriptionText>
                 </ListItem>
               ))}
             </List>
-            <Button onClick={handleToggle} sx={{ width: '200px' }}>
-              CZYTAJ WIĘCEJ
-            </Button>
-            <Backdrop
-              sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-              open={open}
-              onClick={handleClose}
-            >
-              <Typography>read more</Typography>
-            </Backdrop>
+            <CannotBeADonorDialog />
+          </Box>
+        </CustomBox>
+        <CustomBox>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'left',
+              alignItems: 'left',
+              my: 10
+            }}
+          >
+            <TitleText variant="h3">A po oddaniu krwi...</TitleText>
+            <DesctriptionText variant="body2">
+              <List
+                sx={{
+                  ml: 3,
+                  mb: 3,
+                  listStyleType: 'disc',
+                  '& .MuiListItem-root': {
+                    display: 'list-item'
+                  }
+                }}
+              >
+                {afterBloodDonation.map((after) => (
+                  <ListItem>
+                    <DesctriptionText>{after}</DesctriptionText>
+                  </ListItem>
+                ))}
+              </List>
+            </DesctriptionText>
+          </Box>
+          <Box sx={{ width: '400px' }}>
+            <Img src={chocolateImage} alt="chocolateImage" />
           </Box>
         </CustomBox>
       </Container>
+      <Box sx={{ backgroundColor: '#E6F0FF' }}>
+        <Footer />
+      </Box>
     </Box>
   );
 };
