@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Blood-Donation/static/css/main.49d691bd.css",
+    "main.js": "/Blood-Donation/static/js/main.540aac1a.js",
+    "static/media/chocolateImage.jpg": "/Blood-Donation/static/media/chocolateImage.fb4ec6ac45b0209add43.jpg",
+    "static/media/bloodTypes.jpg": "/Blood-Donation/static/media/bloodTypes.f2249b856b761ff1b73c.jpg",
+    "static/media/Poppins-Regular.ttf": "/Blood-Donation/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Bold.ttf": "/Blood-Donation/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/image1.png": "/Blood-Donation/static/media/image1.ba18995782d6344867ba.png",
+    "static/media/Lifesavers.png": "/Blood-Donation/static/media/Lifesavers.c982a1bedfac60f96ce5.png",
+    "static/media/event1.png": "/Blood-Donation/static/media/event1.6b52a6bd05091bcec020.png",
+    "static/media/event2.png": "/Blood-Donation/static/media/event2.7aea6d1c1378081e832c.png",
+    "static/media/event3.png": "/Blood-Donation/static/media/event3.7faf0813d152b06fe822.png",
+    "index.html": "/Blood-Donation/index.html",
+    "main.49d691bd.css.map": "/Blood-Donation/static/css/main.49d691bd.css.map",
+    "main.540aac1a.js.map": "/Blood-Donation/static/js/main.540aac1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49d691bd.css",
+    "static/js/main.540aac1a.js"
+  ]
+}
