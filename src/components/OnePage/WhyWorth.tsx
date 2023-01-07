@@ -1,8 +1,6 @@
 import React from 'react';
-import { Box, Button, styled, Typography, List, ListItem } from '@mui/material';
-
+import { Box, styled, Typography, List, ListItem } from '@mui/material';
 import { Link as MoreInfoLink, Route, Routes } from 'react-router-dom';
-
 import CustomButton from '../CustomButton';
 import MoreInformation from '../MoreInformation/MoreInformation';
 

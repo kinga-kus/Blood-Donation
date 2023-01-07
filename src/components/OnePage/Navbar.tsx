@@ -1,26 +1,12 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Link as RegisterationLink } from 'react-router-dom';
-
-import {
-  AppBar,
-  Container,
-  Box,
-  styled,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-  Link
-} from '@mui/material';
-import BloodtypeIcon from '@mui/icons-material/Bloodtype';
+import { Container, Box, styled, Typography, Link } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import logoImg from '../../assets/logo.png';
-
 import CustomButton from '../CustomButton';
 import Operation from '../Registeration/RegisterSteps';
+import WhyWorth from './WhyWorth';
 
 const NavLink = styled(Link)(({ theme }) => ({
   fontSize: '14px',
@@ -31,10 +17,10 @@ const NavLink = styled(Link)(({ theme }) => ({
 }));
 
 const NavbarLinks = [
-  { label: 'Home', path: '#' },
-  { label: 'O Nas', path: '#' },
-  { label: 'Informacje', path: '#' },
-  { label: 'Kontakt', path: '#' }
+  { label: 'Home', path: '/Blood-Donation' },
+  { label: 'O Nas', path: '/Blood-Donation/#mission' },
+  { label: 'Informacje', path: '/informacje' },
+  { label: 'Kontakt', path: '/Blood-Donation/#contact' }
 ];
 
 const NavbarLinksBox = styled(Box)(({ theme }) => ({
@@ -123,6 +109,7 @@ const Navbar = () => {
       </NavbarContainer>
       <Routes>
         <Route path="/rejestracja" element={<Operation />} />
+        <Route path="/informacje" element={<WhyWorth />} />
       </Routes>
     </>
   );
