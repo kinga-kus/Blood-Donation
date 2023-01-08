@@ -1,11 +1,5 @@
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  ButtonProps,
-  styled
-} from '@mui/material';
+import React from 'react';
+import { Container, Box, Typography, styled, Link } from '@mui/material';
 import bloodDonationImg from '../../assets/image1.png';
 import CustomButton from '../CustomButton';
 import Navbar from './Navbar';
@@ -59,11 +53,13 @@ const Banner = () => {
               Możesz uratować życie wielu osobom - zostań dawcą krwi. To nic nie
               kosztuje, a wystarczą tylko chęci!
             </Typography>
-            <CustomButton
-              backgroundColor="#0F1B4C"
-              color="#fff"
-              buttonText="Więcej"
-            />
+            <Link href="/Blood-Donation/#mission">
+              <CustomButton
+                backgroundColor="#0F1B4C"
+                color="#fff"
+                buttonText="Więcej"
+              />
+            </Link>
           </Box>
           <Box sx={{ flex: '1.25' }}>
             <img

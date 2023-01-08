@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Button, styled, Typography } from '@mui/material';
-
-import CustomButton from '../CustomButton';
+import { Box, styled, Typography } from '@mui/material';
 
 const CustomBox = styled(Box)(({ theme }) => ({
   width: '60%',
@@ -13,6 +11,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
 const AboutUs = () => {
   return (
     <Box
+      id="mission"
       sx={{
         display: 'flex',
         flexDirection: 'column',
