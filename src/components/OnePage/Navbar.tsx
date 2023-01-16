@@ -23,7 +23,7 @@ import WhyWorth from './WhyWorth';
 const pages = [
   { label: 'Home', path: '/Blood-Donation' },
   { label: 'About Us', path: '/Blood-Donation/#mission' },
-  { label: 'Information', path: '/information' },
+  { label: 'Information', path: '/Blood-Donation/information' },
   { label: 'Contact', path: '/Blood-Donation/#contact' }
 ];
 
