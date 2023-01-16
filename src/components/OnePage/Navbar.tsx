@@ -23,7 +23,7 @@ import WhyWorth from './WhyWorth';
 const pages = [
   { label: 'Home', path: '/Blood-Donation' },
   { label: 'About Us', path: '/Blood-Donation/#mission' },
-  { label: 'Information', path: '/informacje' },
+  { label: 'Information', path: '/information' },
   { label: 'Contact', path: '/Blood-Donation/#contact' }
 ];
 
@@ -42,14 +42,6 @@ const NavLink = styled(Link)(({ theme }) => ({
   color: '#EEE5E9',
   '&:hover': {
     color: '#fff'
-  }
-}));
-
-const CustomMenuIcon = styled(MenuIcon)(({ theme }) => ({
-  display: 'none',
-  marginRight: theme.spacing(2),
-  [theme.breakpoints.down('md')]: {
-    display: 'block'
   }
 }));
 
@@ -78,23 +70,13 @@ const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
