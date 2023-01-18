@@ -1,25 +1,34 @@
 import React from 'react';
-import { Container, Box, Typography, styled, Link } from '@mui/material';
-import bloodDonationImg from '../../assets/image1.png';
+import { Box, Typography, styled, Link, Button } from '@mui/material';
 import CustomButton from '../CustomButton';
-import Navbar from './Navbar';
+import bannerImage from '../../assets/bannerImage.jpg';
 
-const CustomBox = styled(Box)(({ theme }) => ({
+const BannerContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
+  background: '#FFFFFF',
   gap: theme.spacing(5),
-  marginTop: theme.spacing(3),
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    padding: theme.spacing(5)
+  },
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(5)
   }
 }));
 
-const Title = styled(Typography)(({ theme }) => ({
+const BannerContent = styled(Box)(({ theme }) => ({
   display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
-  fontSize: '50px',
+  width: '525px',
+  marginTop: '230px'
+}));
+
+const BannerTitle = styled(Typography)(({ theme }) => ({
+  fontSize: '64px',
   fontFamily: 'Poppins',
   fontWeight: 700,
   [theme.breakpoints.down('sm')]: {
@@ -27,50 +36,46 @@ const Title = styled(Typography)(({ theme }) => ({
   }
 }));
 
+const BannerDescription = styled(Typography)(({ theme }) => ({
+  fontFamily: 'Poppins',
+  fontWeight: 'regular',
+  marginBottom: '90px'
+}));
+
+const BannerImage = styled('img')(({ theme }) => ({
+  width: '500px',
+  [theme.breakpoints.down('md')]: {
+    width: '350px'
+  }
+}));
+
 const Banner = () => {
   return (
-    <Box sx={{ backgroundColor: '#E6F0FF', minHeight: '80vh' }}>
-      <Navbar />
-      <Container>
-        <CustomBox>
-          <Box sx={{ flex: 1 }}>
-            <Title
-              variant="h1"
-              sx={{
-                mt: 10
-              }}
-            >
-              Centrum Krwiodawstwa
-            </Title>
-            <Typography
-              variant="body2"
-              sx={{
-                fontSize: '18px',
-                color: '#5A6473',
-                my: 4
-              }}
-            >
-              Możesz uratować życie wielu osobom - zostań dawcą krwi. To nic nie
-              kosztuje, a wystarczą tylko chęci!
-            </Typography>
-            <Link href="/Blood-Donation/#mission">
-              <CustomButton
-                backgroundColor="#0F1B4C"
-                color="#fff"
-                buttonText="Więcej"
-              />
-            </Link>
-          </Box>
-          <Box sx={{ flex: '1.25' }}>
-            <img
-              src={bloodDonationImg}
-              alt="bloodDonationImg"
-              style={{ maxWidth: '80%', marginBottom: '2rem' }}
-            />
-          </Box>
-        </CustomBox>
-      </Container>
-    </Box>
+    <BannerContainer>
+      <BannerContent>
+        <Typography variant="h6">Welcome...</Typography>
+        <BannerTitle variant="h2" sx={{ lineHeight: '96px' }}>
+          Blood Donation Center
+        </BannerTitle>
+        <BannerDescription variant="subtitle1">
+          You can save many lives - become a blood donor. It's free, all you
+          need is willingness!
+        </BannerDescription>
+        <Link
+          href="/Blood-Donation/#mission"
+          style={{ textDecoration: 'none' }}
+        >
+          <CustomButton
+            backgroundColor="#CC2936"
+            color="#fff"
+            buttonText="Więcej"
+          />
+        </Link>
+      </BannerContent>
+      <Box>
+        <BannerImage src={bannerImage} />
+      </Box>
+    </BannerContainer>
   );
 };
 

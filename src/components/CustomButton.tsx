@@ -14,6 +14,7 @@ const CustomButton: FC<ICustomButton> = ({
 }) => {
   const CustomButtonWrapper = styled(Button)(({ theme }) => ({
     backgroundColor: backgroundColor,
+    width: 260,
     color: color,
     fontWeight: '700',
     fontSize: '14px',
