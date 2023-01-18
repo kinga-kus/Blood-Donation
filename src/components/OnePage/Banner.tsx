@@ -8,7 +8,6 @@ const BannerContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   background: '#FFFFFF',
   gap: theme.spacing(5),
-  // padding: theme.spacing(5),
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
