@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Navbar from './OnePage/Navbar';
 import Banner from './OnePage/Banner';
 import AboutUs from './OnePage/AboutUs';
 import ActualEvents from './OnePage/ActualEvents';
@@ -10,6 +11,7 @@ import Footer from './OnePage/Footer';
 const OnePage = () => {
   return (
     <>
+      <Navbar />
       <Banner />
       <AboutUs />
       <ActualEvents />
