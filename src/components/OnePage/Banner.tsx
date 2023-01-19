@@ -24,7 +24,7 @@ const BannerContent = styled(Box)(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   width: '525px',
-  marginTop: '230px'
+  marginTop: '30px'
 }));
 
 const BannerTitle = styled(Typography)(({ theme }) => ({
