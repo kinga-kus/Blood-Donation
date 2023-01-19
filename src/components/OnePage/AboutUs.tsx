@@ -4,6 +4,8 @@ import { CustomHeader, CustomQuote } from '../TitlesAndHeaders';
 import image1 from '../../assets/image1.png';
 import image2 from '../../assets/image2.png';
 
+const images = [image1, image2];
+
 const CustomBox = styled(Box)(({ theme }) => ({
   padding: '60px 50px',
   marginTop: '80px',
@@ -41,13 +43,6 @@ const CustomGrid = styled(Grid)(({ theme }) => ({
   justifyContent: 'center'
 }));
 
-const Item = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(1),
-  borderRadius: 20,
-  textAlign: 'center',
-  height: '238px'
-}));
-
 const Img = styled('img')({
   margin: 'auto',
   display: 'block',
@@ -73,15 +68,10 @@ const AboutUs = () => {
           </Typography>
         </CustomTextBox>
       </Box>
-      <CustomGrid
-        container
-        rowSpacing={1}
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 2, sm: 2, md: 8 }}
-      >
-        {Array.from(Array(2)).map((_, index) => (
-          <Grid item xs={2} sm={4} md={4} key={index}>
-            <Img alt="complex" src={image1} />
+      <CustomGrid container spacing={2} columns={{ xs: 1, sm: 1, md: 8 }}>
+        {images.map((img) => (
+          <Grid item xs={1} md={4}>
+            <Img src={img} />
           </Grid>
         ))}
       </CustomGrid>
