@@ -1,113 +1,113 @@
 import { Box, Typography, Container, styled } from '@mui/material';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
-import actualEvent1 from '../../assets/event1.png';
-import actualEvent2 from '../../assets/event2.png';
-import actualEvent3 from '../../assets/event3.png';
+import {
+  CustomHeader,
+  CustomQuote,
+  CustomDayNumber,
+  CustomMonthText,
+  CustomTitleEvent
+} from '../TitlesAndHeaders';
 
-const EventsBox = styled(Box)(({ theme }) => ({
+const eventDays = [
+  {
+    day: '14',
+    month: 'July',
+    title: 'World Blood Donor Day',
+    text: 'Donating blood is an act of solidarity. Join and save lives.'
+  },
+  {
+    day: '15',
+    month: 'July',
+    title: 'Blood Donation Campaign',
+    text: '9a.m. - 1p.m., Uratujmy Życie 5 Street, Cracow'
+  },
+  {
+    day: '13',
+    month: 'September',
+    title: 'Blood Donation Campaign',
+    text: '9a.m. - 1p.m., Krakowska 12 Street, Cracow'
+  }
+];
+
+const quotes = [
+  'You don’t have to be a doctor to save a life.',
+  'It’s safe. It’s simple. It saves lives.'
+];
+
+const CustomBox = styled(Box)(({ theme }) => ({
   display: 'flex',
-  justifyContent: 'space-around',
-  width: '70%',
-  marginTop: theme.spacing(5),
-  [theme.breakpoints.down('md')]: {
-    width: '100%',
-    flexDirection: 'column'
+  alignItems: 'center',
+  padding: '60px 50px',
+  marginTop: '80px',
+  backgroundColor: '#EEE5E9',
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left',
+    padding: theme.spacing(5)
   }
 }));
 
-const EventBox = styled(Box)(({ theme }) => ({
+const CustomTextBox = styled(Box)(({ theme }) => ({
   display: 'flex',
-  flexDirection: 'column',
+  marginTop: '80px',
   alignItems: 'center',
-  marginTop: theme.spacing(5),
   [theme.breakpoints.down('sm')]: {
-    margin: theme.spacing(2, 0, 2, 0)
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left',
+    padding: theme.spacing(5)
+  },
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(5),
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left'
   }
 }));
 
 const ActualEvents = () => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        my: 10
-      }}
-    >
-      <Typography
-        variant="h3"
+    <CustomBox>
+      <Box>
+        <CustomHeader headerText="Actual Events" />
+        {eventDays.map((event) => (
+          <CustomTextBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '20px',
+                width: '160px'
+              }}
+            >
+              <CustomDayNumber dayNumber={event.day} />
+              <CustomMonthText monthText={event.month} />
+            </Box>
+            <Box sx={{ marginLeft: '83px' }}>
+              <CustomTitleEvent titleText={event.title} />
+              <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>
+                {event.text}
+              </Typography>
+            </Box>
+          </CustomTextBox>
+        ))}
+      </Box>
+      <Box
         sx={{
-          fontSize: '35px',
-          fontWeight: 'bold',
-          color: '#000339',
-          my: 3
+          display: 'flex',
+          flexDirection: 'column',
+          textAlign: 'center',
+          gap: '50px',
+          marginLeft: '100px'
         }}
       >
-        Aktualne wydarzenia
-      </Typography>
-      <EventsBox>
-        <EventBox>
-          <img src={actualEvent1} alt="actualEvent1" />
-          <Box
-            sx={{
-              cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689FF' }}
-            >
-              Więcej
-            </Typography>
-            <ArrowRightAltIcon style={{ color: '#0689FF' }} />
-          </Box>
-        </EventBox>
-        <EventBox>
-          <img src={actualEvent2} alt="actualEvent2" />
-          <Box
-            sx={{
-              cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689FF' }}
-            >
-              Więcej
-            </Typography>
-            <ArrowRightAltIcon style={{ color: '#0689FF' }} />
-          </Box>
-        </EventBox>
-        <EventBox>
-          <img src={actualEvent3} alt="actualEvent1" />
-          <Box
-            sx={{
-              cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}
-          >
-            <Typography
-              variant="body2"
-              sx={{ fontWeight: 'bold', fontSize: '14px', color: '#0689FF' }}
-            >
-              Więcej
-            </Typography>
-            <ArrowRightAltIcon style={{ color: '#0689FF' }} />
-          </Box>
-        </EventBox>
-      </EventsBox>
-    </Box>
+        {quotes.map((quote) => (
+          <CustomQuote quoteText={quote} />
+        ))}
+      </Box>
+    </CustomBox>
   );
 };
 
