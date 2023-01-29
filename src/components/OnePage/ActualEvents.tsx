@@ -37,14 +37,15 @@ const quotes = [
 
 const CustomBox = styled(Box)(({ theme }) => ({
   display: 'flex',
+  justifyContent: 'space-between',
   alignItems: 'center',
   padding: '60px 50px',
   marginTop: '80px',
   backgroundColor: '#EEE5E9',
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
     alignItems: 'left',
-    textAlign: 'left',
+    textAlign: 'center',
     padding: theme.spacing(5)
   }
 }));
@@ -56,14 +57,13 @@ const CustomTextBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'left',
-    textAlign: 'left',
-    padding: theme.spacing(5)
+    textAlign: 'left'
   },
   [theme.breakpoints.down('md')]: {
-    padding: theme.spacing(5),
     flexDirection: 'column',
     alignItems: 'left',
-    textAlign: 'left'
+    textAlign: 'left',
+    width: '350px'
   }
 }));
 
@@ -79,15 +79,20 @@ const ActualEvents = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '20px',
-                width: '160px'
+                width: 'auto'
               }}
             >
               <CustomDayNumber dayNumber={event.day} />
               <CustomMonthText monthText={event.month} />
             </Box>
-            <Box sx={{ marginLeft: '83px' }}>
+            <Box sx={{ marginLeft: '20px' }}>
               <CustomTitleEvent titleText={event.title} />
-              <Typography sx={{ fontFamily: 'Poppins', fontSize: '14px' }}>
+              <Typography
+                sx={{
+                  fontFamily: 'Poppins',
+                  fontSize: '14px'
+                }}
+              >
                 {event.text}
               </Typography>
             </Box>
@@ -98,9 +103,9 @@ const ActualEvents = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          textAlign: 'center',
+          textAlign: 'right',
           gap: '50px',
-          marginLeft: '100px'
+          marginTop: '40px'
         }}
       >
         {quotes.map((quote) => (
