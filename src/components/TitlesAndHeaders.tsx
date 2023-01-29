@@ -73,7 +73,8 @@ export const CustomMonthText: FC<ICustomMonthText> = ({ monthText }) => {
     color: 'black',
     fontWeight: 700,
     fontSize: '16px',
-    fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
+    width: '100px'
   }));
 
   return (
