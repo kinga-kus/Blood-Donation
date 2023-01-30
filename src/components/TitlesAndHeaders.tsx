@@ -43,7 +43,7 @@ export const CustomQuote: FC<ICustomQuote> = ({ quoteText }) => {
     color: '#08415C',
     fontWeight: 500,
     fontSize: '40px',
-    width: '480px'
+    width: '580px'
   }));
 
   return (

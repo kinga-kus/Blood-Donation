@@ -1,25 +1,66 @@
 import React from 'react';
 import { Box, styled, Typography, List, ListItem } from '@mui/material';
 import { Link as MoreInfoLink, Route, Routes } from 'react-router-dom';
+
 import CustomButton from '../CustomButton';
+import { CustomHeader, CustomQuote } from '../TitlesAndHeaders';
+
 import MoreInformation from '../MoreInformation/MoreInformation';
 
 const CustomBox = styled(Box)(({ theme }) => ({
-  width: '60%',
+  padding: '60px 50px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  marginTop: '80px',
+  backgroundColor: '#EEE5E9',
   [theme.breakpoints.down('md')]: {
-    width: '85%'
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left',
+    padding: theme.spacing(5)
+  }
+}));
+
+const CustomTextBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  marginTop: '80px',
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left',
+    padding: theme.spacing(5)
+  },
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(5),
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left'
+  }
+}));
+
+const CustomImageBox = styled(Box)(({ theme }) => ({
+  width: '411px',
+  height: '285px',
+  border: '1px solid red',
+  [theme.breakpoints.down('md')]: {
+    padding: theme.spacing(5),
+    width: '80%',
+    alignItems: 'center',
+    textAlign: 'center'
   }
 }));
 
 const BulletListText = [
-  { text: 'ratujesz życie i zdrowie drugiego człowieka' },
+  { text: 'you save the life and health of another person,' },
   {
-    text: 'za każdym razem gdy oddajesz krew masz wykonywane badania laboratoryjne'
+    text: 'every time you donate blood, you have laboratory tests performed,'
   },
   {
-    text: 'w dniu oddania i następnego dnia przysługuje Ci zwolnienie z pracy, szkoły'
+    text: 'on the day of delivery and the next day you are entitled to leave from work, school,'
   },
-  { text: 'otrzymujesz czekolady jako równoważnik kaloryczny' }
+  { text: 'you get chocolate as a calorie equivalent.' }
 ];
 
 const BulletText = styled(Typography)(({ theme }) => ({
@@ -32,65 +73,38 @@ const BulletText = styled(Typography)(({ theme }) => ({
 const WhyWorth = () => {
   return (
     <>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'left',
-          alignItems: 'left',
-          my: 10,
-          ml: 10
-        }}
-      >
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: '35px',
-            fontWeight: 'bold',
-            color: '#000339',
-            my: 3
-          }}
-        >
-          Dlaczego warto?
-        </Typography>
-        <CustomBox>
-          <Typography
-            variant="body2"
-            sx={{
-              fontSize: '16px',
-              fontWeight: 400,
-              color: '#5A6473',
-              textAlign: 'left'
-            }}
-          >
-            Oddawanie krwi jest bezpiecznie i nie stanowi zagrożenia dla Twojego
-            zdrowia czy życia:
-          </Typography>
-          <List
-            sx={{
-              ml: 3,
-              mb: 3,
-              listStyleType: 'disc',
-              '& .MuiListItem-root': {
-                display: 'list-item'
-              }
-            }}
-          >
-            {BulletListText.map((bullet) => (
-              <ListItem>
-                <BulletText>{bullet.text}</BulletText>
-              </ListItem>
-            ))}
-          </List>
-          <MoreInfoLink to="/informacje">
-            <CustomButton
-              backgroundColor="#0F1B4C"
-              color="#fff"
-              buttonText="Więcej"
-            />
-          </MoreInfoLink>
-        </CustomBox>
-      </Box>
+      <CustomBox>
+        <Box>
+          <CustomHeader headerText="Why Is It Worth?" />
+          <CustomTextBox>
+            <CustomQuote quoteText="Donating blood is safe and does not pose a threat to your health or life:" />
+            <List
+              sx={{
+                ml: 3,
+                mb: 3,
+                listStyleType: 'disc',
+                '& .MuiListItem-root': {
+                  display: 'list-item'
+                }
+              }}
+            >
+              {BulletListText.map((bullet) => (
+                <ListItem>
+                  <BulletText>{bullet.text}</BulletText>
+                </ListItem>
+              ))}
+            </List>
+            <MoreInfoLink to="/informacje" style={{ textDecoration: 'none' }}>
+              <CustomButton
+                backgroundColor="#CC2936"
+                color="#fff"
+                buttonText="READ MORE"
+              />
+            </MoreInfoLink>
+          </CustomTextBox>
+        </Box>
+        <CustomImageBox></CustomImageBox>
+      </CustomBox>
       <Routes>
         <Route path="/informacje" element={<MoreInformation />} />
       </Routes>
