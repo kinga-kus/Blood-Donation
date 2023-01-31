@@ -21,6 +21,10 @@ interface ICustomEventTitle {
   titleText: string;
 }
 
+interface ICustomContact {
+  contactText: string;
+}
+
 export const CustomHeader: FC<ICustomHeader> = ({ headerText }) => {
   return (
     <Box>
@@ -95,6 +99,21 @@ export const CustomTitleEvent: FC<ICustomEventTitle> = ({ titleText }) => {
   return (
     <Box>
       <EventTitleTypography>{titleText}</EventTitleTypography>
+    </Box>
+  );
+};
+
+export const CustomContact: FC<ICustomContact> = ({ contactText }) => {
+  const ContactTypography = styled(Typography)(({ theme }) => ({
+    color: '#08415C',
+    fontWeight: 700,
+    fontSize: '20px',
+    fontFamily: 'Poppins'
+  }));
+
+  return (
+    <Box>
+      <ContactTypography>{contactText}</ContactTypography>
     </Box>
   );
 };
