@@ -69,7 +69,7 @@ const CustomTextBox = styled(Box)(({ theme }) => ({
 
 const ActualEvents = () => {
   return (
-    <CustomBox>
+    <CustomBox id="actual-events">
       <Box>
         <CustomHeader headerText="Actual Events" />
         {eventDays.map((event) => (
