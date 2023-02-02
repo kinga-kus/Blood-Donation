@@ -1,6 +1,8 @@
 ## Blood Donation
 A Blood Donation app for getting information and making registeration easier!
 
+Here is a link to web: https://kinga-kus.github.io/Blood-Donation/
+
 ## Table of Contents
 - [Blood Donation](#blood-donation)
 - [Table of Contents](#table-of-contents)
@@ -15,20 +17,17 @@ A Blood Donation app for getting information and making registeration easier!
 The project Blood Donation is a web which enables people searching information about how to became a blood donor and online registeration for an apointment.
 
 ## Built with
-
 ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 
 ## Design
-
 Here You can see it in a Figma file <a href="https://www.figma.com/file/duToCPC6a9qlzfpcS7dGBi/Blood-Donation?t=4qSsS1EO3YRPxVRH-6"  target="_blank">here</a>.
 
 - Fast and easy registeration
 - Reliable source of information
 
 ## Installation
-
 Install Blood-Donation with npm
 
 ```bash
@@ -66,6 +65,7 @@ Start the server
 The project is under modification.
 
 ## Authors
-
 - [@kinga-kus](https://www.github.com/kinga-kus)
+
+## Collaborators
 - [@adam-kostuch](https://www.github.com/adam-kostuch)
