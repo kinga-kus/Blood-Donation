@@ -7,6 +7,8 @@ import { CustomHeader, CustomQuote } from '../TitlesAndHeaders';
 
 import MoreInformation from '../MoreInformation/MoreInformation';
 
+import happyPerson from '../../assets/happyPerson.png';
+
 const CustomBox = styled(Box)(({ theme }) => ({
   padding: '60px 50px',
   display: 'flex',
@@ -40,10 +42,9 @@ const CustomTextBox = styled(Box)(({ theme }) => ({
   }
 }));
 
-const CustomImageBox = styled(Box)(({ theme }) => ({
-  width: '411px',
-  height: '285px',
-  border: '1px solid red',
+const CustomImageBox = styled('img')(({ theme }) => ({
+  width: '700px',
+  height: '550px',
   [theme.breakpoints.down('md')]: {
     padding: theme.spacing(5),
     width: '80%',
@@ -103,7 +104,7 @@ const WhyWorth = () => {
             </MoreInfoLink>
           </CustomTextBox>
         </Box>
-        <CustomImageBox></CustomImageBox>
+        <CustomImageBox src={happyPerson} />
       </CustomBox>
       <Routes>
         <Route path="/informacje" element={<MoreInformation />} />

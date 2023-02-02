@@ -1,14 +1,27 @@
 import React from 'react';
 import { Box, Grid, Paper, styled, Typography } from '@mui/material';
 import { CustomHeader, CustomQuote } from '../TitlesAndHeaders';
-import image1 from '../../assets/image1.png';
-import image2 from '../../assets/image2.png';
+import Avatar1 from '../../assets/Avatar-1.png';
+import Avatar2 from '../../assets/Avatar-2.png';
+import Avatar3 from '../../assets/Avatar-3.png';
 
-const images = [image1, image2];
+const department = [
+  {
+    image: Avatar1,
+    name: 'Doctor Suzanna Gil',
+    title: 'Deputy Medical Director'
+  },
+  { image: Avatar2, name: 'Doctor Gerald Nowak', title: 'Director' },
+  {
+    image: Avatar3,
+    name: 'Doctor of Medicine Andrew Pol',
+    title: 'Director of the Donor Department'
+  }
+];
 
 const CustomBox = styled(Box)(({ theme }) => ({
   padding: '60px 50px',
-  marginTop: '80px',
+  marginTop: '100px',
   backgroundColor: '#EEE5E9',
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
@@ -36,7 +49,7 @@ const CustomTextBox = styled(Box)(({ theme }) => ({
 }));
 
 const CustomGrid = styled(Grid)(({ theme }) => ({
-  marginTop: '84px',
+  marginTop: '10px',
   flexGrow: 1,
   display: 'flex',
   alignItems: 'center',
@@ -46,14 +59,14 @@ const CustomGrid = styled(Grid)(({ theme }) => ({
 const Img = styled('img')({
   margin: 'auto',
   display: 'block',
-  maxWidth: '100%',
-  maxHeight: '100%'
+  width: '100%',
+  height: '100%'
 });
 
 const AboutUs = () => {
   return (
     <CustomBox>
-      <Box>
+      <Box sx={{ marginBottom: '80px' }}>
         <CustomHeader headerText="About Us" />
         <CustomTextBox>
           <CustomQuote quoteText="Your help will be a gift for the others" />
@@ -68,13 +81,53 @@ const AboutUs = () => {
           </Typography>
         </CustomTextBox>
       </Box>
-      <CustomGrid container spacing={2} columns={{ xs: 1, sm: 1, md: 8 }}>
-        {images.map((img) => (
-          <Grid item xs={1} md={4}>
-            <Img src={img} />
+      <Grid
+        sx={{
+          flexGrow: 1,
+          marginBottom: '80px',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          width: '100%'
+        }}
+        container
+        spacing={2}
+        item
+        xs={12}
+      >
+        {department.map((person) => (
+          <Grid
+            item
+            sx={{
+              height: 250,
+              width: 250
+            }}
+          >
+            <Img src={person.image} />
+            <Box sx={{ padding: '20px' }}>
+              <Typography
+                sx={{
+                  fontFamily: 'Poppins',
+                  fontSize: '18px',
+                  fontWeight: 600,
+                  height: '60px',
+                  color: '#08415C'
+                }}
+              >
+                {person.name}
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: 'Poppins',
+                  fontSize: '12px'
+                }}
+              >
+                {person.title}
+              </Typography>
+            </Box>
           </Grid>
         ))}
-      </CustomGrid>
+      </Grid>
     </CustomBox>
   );
 };

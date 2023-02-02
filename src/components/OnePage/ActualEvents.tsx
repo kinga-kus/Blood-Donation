@@ -39,9 +39,7 @@ const CustomBox = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '60px 50px',
-  marginTop: '80px',
-  backgroundColor: '#EEE5E9',
+  padding: '30px 50px',
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
     alignItems: 'left',
