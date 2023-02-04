@@ -4,7 +4,7 @@ import { Routes, Route, Link as FooterLink } from 'react-router-dom';
 import Departments from '../FotterLinks/Departments';
 import Gallery from '../FotterLinks/Gallery';
 import Questions from '../FotterLinks/Questions';
-import RegisterSteps from '../Registeration/RegisterSteps';
+import RegisterSteps from '../Registeration/Registeration';
 
 const CustomContainer = styled(Container)(({ theme }) => ({
   display: 'flex',
