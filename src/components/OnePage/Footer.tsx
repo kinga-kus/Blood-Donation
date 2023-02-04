@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Container, MenuItem, styled, Typography } from '@mui/material';
-import { Routes, Route, Link as FooterLink } from 'react-router-dom';
+import { Routes, Route, Link as FooterLink, Link } from 'react-router-dom';
 import Departments from '../FotterLinks/Departments';
 import Gallery from '../FotterLinks/Gallery';
 import Questions from '../FotterLinks/Questions';
 import RegisterSteps from '../Registeration/Registeration';
+import { HashLink } from 'react-router-hash-link';
 
 const CustomContainer = styled(Container)(({ theme }) => ({
   display: 'flex',
@@ -72,12 +73,12 @@ const Footer = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   {label.links.map((subcategory) => (
-                    <FooterLink
+                    <Link
                       to={subcategory.path}
                       style={{ textDecoration: 'none' }}
                     >
                       <FooterItem>{subcategory.link}</FooterItem>
-                    </FooterLink>
+                    </Link>
                   ))}
                 </Box>
               </Box>

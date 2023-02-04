@@ -65,7 +65,7 @@ const Img = styled('img')({
 
 const AboutUs = () => {
   return (
-    <CustomBox>
+    <CustomBox id="mission">
       <Box sx={{ marginBottom: '80px' }}>
         <CustomHeader headerText="About Us" />
         <CustomTextBox>
