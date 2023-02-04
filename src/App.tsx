@@ -19,7 +19,7 @@ function App() {
       <Route path="/rejestracja" element={<Operation />} />
       <Route path="/informacje" element={<MoreInformation />} />
       <Route path="/Blood-Donation/departments" element={<Departments />} />
-      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/Blood-Donation/gallery" element={<Gallery />} />
       <Route path="/questions" element={<Questions />} />
       <Route path="/registeration" element={<RegisterSteps />} />
     </Routes>
