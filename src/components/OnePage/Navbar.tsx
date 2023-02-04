@@ -17,7 +17,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 
-import Operation from '../Registeration/RegisterSteps';
+import Operation from '../Registeration/Registeration';
 import WhyWorth from './WhyWorth';
 
 const pages = [
@@ -169,7 +169,7 @@ const Navbar = () => {
                   textDecoration: 'none'
                 }}
               >
-                LOGO
+                Blood Donation
               </Typography>
               <NavbarLinksBox
                 sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}

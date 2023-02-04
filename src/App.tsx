@@ -9,8 +9,8 @@ import Gallery from './components/FotterLinks/Gallery';
 import Questions from './components/FotterLinks/Questions';
 import MoreInformation from './components/MoreInformation/MoreInformation';
 import OnePage from './components/OnePage';
-import RegisterSteps from './components/Registeration/RegisterSteps';
-import Operation from './components/Registeration/RegisterSteps';
+import Registeration from './components/Registeration/Registeration';
+import Operation from './components/Registeration/Registeration';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <Route path="/Blood-Donation/departments" element={<Departments />} />
       <Route path="/Blood-Donation/gallery" element={<Gallery />} />
       <Route path="/questions" element={<Questions />} />
-      <Route path="/registeration" element={<RegisterSteps />} />
+      <Route path="/registeration" element={<Registeration />} />
     </Routes>
   );
 }
