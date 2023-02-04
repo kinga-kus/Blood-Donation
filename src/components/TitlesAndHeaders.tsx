@@ -46,8 +46,7 @@ export const CustomQuote: FC<ICustomQuote> = ({ quoteText }) => {
   const QuoteTypography = styled(Typography)(({ theme }) => ({
     color: '#08415C',
     fontWeight: 500,
-    fontSize: '40px',
-    width: '580px'
+    fontSize: '40px'
   }));
 
   return (
