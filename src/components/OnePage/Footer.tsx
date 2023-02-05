@@ -33,8 +33,7 @@ const FooterLabels = [
     header: 'Blood Donors',
     links: [
       { link: 'Registeration', path: '/Blood-Donation/registeration' },
-      { link: 'Information', path: '/Blood-Donation/information' },
-      { link: 'Questions', path: '/Blood-Donation/questions' }
+      { link: 'Information', path: '/Blood-Donation/information' }
     ]
   }
 ];
@@ -86,7 +85,6 @@ const Footer = () => {
       <Routes>
         <Route path="/departments" element={<Departments />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/questions" element={<Questions />} />
         <Route path="/registeration" element={<RegisterSteps />} />
       </Routes>
     </>
