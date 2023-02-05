@@ -1,80 +1,73 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-  styled,
-  Container,
-  List,
-  ListItem
-} from '@mui/material';
+import { Box, Typography, styled, List, ListItem } from '@mui/material';
+
+import { CustomHeader, CustomQuote } from '../TitlesAndHeaders';
 
 import Navbar from '../OnePage/Navbar';
 import CannotBeADonorDialog from '../MoreInformation/CannotBeADonorDialog';
 import Footer from '../OnePage/Footer';
 
 import bloodTypes from '../../assets/bloodTypes.jpg';
-import chocolateImage from '../../assets/chocolateImage.jpg';
-
-const CustomBox = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  justifyContent: 'center',
-  gap: theme.spacing(5),
-  marginTop: theme.spacing(3),
-  [theme.breakpoints.down('sm')]: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center'
-  },
-  [theme.breakpoints.down('md')]: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center'
-  }
-}));
-
-const TitleText = styled(Typography)(({ theme }) => ({
-  fontSize: '35px',
-  fontWeight: 'bold',
-  color: '#000339',
-  marginBottom: 10
-}));
-
-const DesctriptionText = styled(Typography)(({ theme }) => ({
-  fontSize: '16px',
-  fontWeight: 400,
-  color: '#5A6473',
-  textAlign: 'left'
-}));
 
 const DonorInfo = [
-  'dowód osobisty',
-  'legitymację studencką',
-  'prawo jazdy',
-  'paszport',
-  ' dawca wielokrotny – również legitymację Honorowego Dawcy Krwi'
+  'ID card',
+  'student ID',
+  'driving license',
+  'passport',
+  ' multiple donor - also the Honorary Blood Donor ID'
 ];
 
 const donorRequirements = [
-  'być zdrowy, wypoczęty, wyspany oraz po spożyciu lekkostrawnego i niskokalorycznego posiłku i wypiciu około 1,5 litra płynów w ciągu 24 godzin przed oddaniem krwi',
-  'posiadać nr PESEL oraz powinien posługiwać się językiem polskim w mowie i piśmie w stopniu, który umożliwi mu bez udziału osób trzecich samodzielne zrozumienie treści kwestionariusza i wypełnienie go',
-  'Oddawanie krwi jest zabiegiem całkowicie bezpiecznym dla Dawcy z uwagi na stosowanie w trakcie pobierania krwi wyłącznie sprzętu jednorazowego użytku',
-  'O wszelkich wątpliwościach dotyczących wojego zdrowia należy powiadomić lekarza kwalifikującego do oddania krwi, a także oddać mu osobiście wypełniony Kwestionariusz dla Krwiodawcy zawierający pytania o przeszłość chorobową oraz prowadzony tryb życia kwalifikowanego kandydata',
-  'Osoby wykonujące takie zawody jak: pilot, maszynista, kierowca autobusu, operator dźwigu, oraz pracujące na wysokości, uprawiające wspinaczkę, głębokie nurkowanie mogą powrócić do tych zajęć nie wcześniej niż 12 godz. po oddaniu krwi'
+  'be healthy, rested, well-slept and after eating an easily digestible and low-calorie meal and drinking about 1.5 liters of fluids within 24 hours before donating blood',
+  'have a PESEL number and should be able to use the Polish language in speech and writing to an extent that will enable them to independently understand the content of the questionnaire and complete it without the participation of third parties',
+  'Blood donation is a completely safe procedure for the donor due to the use of only disposable equipment during blood collection',
+  'Any doubts regarding your health should be reported to the doctor qualifying for blood donation, and the completed Blood Donor Questionnaire containing questions about the medical history and lifestyle of the qualified candidate should be handed over to him personally',
+  'People performing professions such as: pilot, train driver, bus driver, crane operator, and working at height, climbing, deep diving can return to these activities no earlier than 12 hours. after donating blood'
 ];
 
 const whoCannotBeADonorShort = [
-  'Nie mogą oddawać krwi osoby, które chorowały na wirusowe zapalenie wątroby (tzw. żółtaczkę zakaźną), nosiciele wirusa HIV oraz chorzy na AIDS. Krwi nie pobiera się od narkomanów, od osób mających kontakty seksualne z wieloma partnerami lub partnerkami, szczególnie znanymi od niedawna.',
-  'Dawcami krwi nie powinni być osoby z aktywną lub przebytą poważną chorobą układu krążenia, układu nerwowego, układu pokarmowego, układu oddechowego, nerek, skóry (np. łuszczyca), układu immunologicznego, układu endokrynnego (np. cukrzyca, choroby tarczycy), tkanki łącznej.',
-  'Nie można oddawać krwi zażywając leki (poza antykoncepcją hormonalną i niektórymi lekami na nadciśnienie).',
-  'Dyskwalifikacją stałą objęci są kandydaci z chorobami krwi i układu krwiotwórczego...'
+  'People who suffered from viral hepatitis (so-called infectious hepatitis), HIV carriers and AIDS patients cannot donate blood. Blood is not taken from drug addicts, from people who have had sexual contacts with multiple partners or partners, especially recently known ones.',
+  'Blood donors should not be people with active or serious diseases of the circulatory system, nervous system, digestive system, respiratory system, kidneys, skin (e.g. psoriasis), immune system, endocrine system (e.g. diabetes, thyroid diseases), connective tissue .',
+  'You cannot donate blood while taking medication (except for hormonal contraception and some high blood pressure medications).',
+  'The permanent disqualification applies to candidates with diseases of the blood and hematopoietic system...'
 ];
 
 const afterBloodDonation = [
-  'posiłek regeneracyjny',
-  'zwolnienie z pracy w dniu oddania krwi',
-  'legitymację Honorowego Dawcy Krwi',
-  'bezpłatne wyniki badań'
+  'regenerative meal',
+  'dismissal from work on the day of blood donation',
+  'Honorary Blood Donor ID',
+  'free test results'
 ];
+
+const CustomBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '30px 50px',
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'center',
+    padding: theme.spacing(5)
+  }
+}));
+
+const CustomTextBox = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  marginTop: '30px',
+  alignItems: 'center',
+  [theme.breakpoints.down('sm')]: {
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left'
+  },
+  [theme.breakpoints.down('md')]: {
+    flexDirection: 'column',
+    alignItems: 'left',
+    textAlign: 'left',
+    width: '350px'
+  }
+}));
 
 const Img = styled('img')({
   margin: 'auto',
@@ -84,192 +77,217 @@ const Img = styled('img')({
 });
 
 const MoreInformation = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
   return (
-    <Box>
-      <Box sx={{ backgroundColor: '#E6F0FF' }}>
-        <Navbar />
-      </Box>
-      <Container>
-        <CustomBox>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'left',
-              alignItems: 'left',
-              my: 10
-            }}
-          >
-            <TitleText variant="h3">Skład i grupa krwi</TitleText>
-            <DesctriptionText variant="body2">
-              Krew składa się z erytrocytów (krwinki czerwone), leukocytów
-              (krwinek białych), trombocytów (płytek krwi) oraz osocza
-              (surowicy). Dorosły człowiek o przeciętnej masie ciała ma w sobie
-              ok. 5-6 litrów krwi, czyli około 10 jej jednostek. Każdy z nas
-              posiada tzw. grupę krwi, która stabilizuje się około 2. roku życia
-              i pozostaje niezmienna już do końca. Jej oznaczenie jest kluczowe
-              przy doborze krwi do przetoczeń wymaganych np. w trakcie zabiegów
-              operacyjnych (np. przeszczepianie narządów), podczas leczenia
-              chorób krwi lub w czasie ciąży.
-            </DesctriptionText>
-          </Box>
-          <Box sx={{ alignSelf: 'center' }}>
-            <Img src={bloodTypes} alt="bloodTypes" />
-          </Box>
-        </CustomBox>
-        <CustomBox>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'left',
-              alignItems: 'left',
-              my: 10
-            }}
-          >
-            <TitleText variant="h3">Kto może oddać krew?</TitleText>
-            <DesctriptionText>
-              Zgłaszający się do oddania krwi ( 18 – 65 lat) powinien posiadać
-              przy sobie dokument ze zdjęciem potwierdzający tożsamość i numer
-              PESEL:
-              <List
-                sx={{
-                  ml: 3,
-                  mb: 3,
-                  listStyleType: 'disc',
-                  '& .MuiListItem-root': {
-                    display: 'list-item'
-                  }
-                }}
-              >
-                {DonorInfo.map((bulletInfo) => (
-                  <ListItem>
-                    <Typography>{bulletInfo}</Typography>
-                  </ListItem>
-                ))}
-              </List>
-              <Typography variant="h6" sx={{ mb: 2 }}>
-                Wymagania:
+    <>
+      <Navbar />
+      <CustomBox>
+        <Box>
+          <CustomHeader headerText="Composition and blood group" />
+          <CustomTextBox>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '20px',
+                width: 'auto'
+              }}
+            >
+              <Typography sx={{ fontFamily: 'Poppins' }}>
+                Blood consists of erythrocytes (red blood cells), leukocytes
+                (white blood cells), thrombocytes (platelets) and plasma
+                (serum). An adult man of average body weight has in himself
+                about 5-6 liters of blood, or about 10 blood units. Each of us
+                has the so-called blood group, which stabilizes around the age
+                of 2 and remains unchanged until the end. Its marking is crucial
+                when selecting blood for transfusions required, e.g. during
+                procedures operations (e.g. organ transplantation), during
+                treatment blood diseases or during pregnancy.
               </Typography>
-              <DesctriptionText sx={{ fontWeight: 700 }}>
-                Każdy, kto zgłasza się do oddania krwi POWINIEN :
-              </DesctriptionText>
-              <List
-                sx={{
-                  ml: 3,
-                  mb: 3,
-                  listStyleType: 'disc',
-                  '& .MuiListItem-root': {
-                    display: 'list-item'
-                  }
-                }}
-              >
-                {donorRequirements.map((requirements) => (
-                  <ListItem>
-                    <DesctriptionText>{requirements}</DesctriptionText>
-                  </ListItem>
-                ))}
-              </List>
-            </DesctriptionText>
-            <DesctriptionText sx={{ fontWeight: 700 }}>
-              Każdy, kto zgłasza się do oddania krwi NIE MOŻE :
-              <List
-                sx={{
-                  ml: 3,
-                  mb: 3,
-                  listStyleType: 'disc',
-                  '& .MuiListItem-root': {
-                    display: 'list-item'
-                  }
-                }}
-              >
-                <ListItem>
-                  <DesctriptionText>
-                    być po spożyciu alkoholu minimum 24 godziny przed oddaniem
-                    krwi
-                  </DesctriptionText>
-                </ListItem>
-              </List>
-            </DesctriptionText>
-          </Box>
-        </CustomBox>
-        <CustomBox>
-          <Box
+              <Box sx={{ alignSelf: 'center' }}>
+                <Img src={bloodTypes} alt="bloodTypes" />
+              </Box>
+            </Box>
+          </CustomTextBox>
+        </Box>
+      </CustomBox>
+      <CustomBox sx={{ backgroundColor: '#EEE5E9', marginTop: '50px' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            textAlign: 'left',
+            gap: '50px',
+            marginTop: '20px'
+          }}
+        >
+          <CustomQuote quoteText="Who can be a donor?" />
+          <Typography sx={{ fontFamily: 'Poppins' }}>
+            The applicant for blood donation (aged 18-65) should have with you a
+            document with a photo confirming your identity and number PESEL:
+          </Typography>
+          <List
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'left',
-              alignItems: 'left',
-              my: 10
+              ml: 3,
+              mb: 3,
+              listStyleType: 'disc',
+              '& .MuiListItem-root': {
+                display: 'list-item'
+              }
             }}
           >
-            <TitleText variant="h3">Kto NIE MOŻE oddać krew?</TitleText>
+            {DonorInfo.map((bulletInfo) => (
+              <ListItem>
+                <Typography sx={{ fontFamily: 'Poppins' }}>
+                  {bulletInfo}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </CustomBox>
+      <CustomBox>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            textAlign: 'left',
+            gap: '50px',
+            marginTop: '20px'
+          }}
+        >
+          <CustomHeader headerText="Requirements" />
+          <Typography sx={{ fontFamily: 'Poppins' }}>
+            Anyone who volunteers to donate blood SHOULD:
+          </Typography>
+          <List
+            sx={{
+              ml: 3,
+              mb: 3,
+              listStyleType: 'disc',
+              '& .MuiListItem-root': {
+                display: 'list-item'
+              }
+            }}
+          >
+            {donorRequirements.map((requirements) => (
+              <ListItem>
+                <Typography sx={{ fontFamily: 'Poppins' }}>
+                  {requirements}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+          <Typography sx={{ fontFamily: 'Poppins' }}>
+            Anyone who volunteers to donate blood CANNOT:
+          </Typography>
+          <List
+            sx={{
+              ml: 3,
+              mb: 3,
+              listStyleType: 'disc',
+              '& .MuiListItem-root': {
+                display: 'list-item'
+              }
+            }}
+          >
+            {donorRequirements.map((requirements) => (
+              <ListItem>
+                <Typography sx={{ fontFamily: 'Poppins' }}>
+                  {requirements}
+                </Typography>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </CustomBox>
+      <CustomBox sx={{ backgroundColor: '#EEE5E9', marginTop: '50px' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            textAlign: 'left',
+            gap: '50px',
+            marginTop: '20px'
+          }}
+        >
+          <CustomQuote quoteText="Who cannot be a donor?" />
+          <Typography sx={{ fontFamily: 'Poppins' }}>
+            The applicant for blood donation (aged 18-65) should have with you a
+            document with a photo confirming your identity and number PESEL:
+          </Typography>
+          <List
+            sx={{
+              ml: 3,
+              mb: 3,
+              listStyleType: 'disc',
+              '& .MuiListItem-root': {
+                display: 'list-item'
+              }
+            }}
+          >
+            {whoCannotBeADonorShort.map((cannot) => (
+              <ListItem>
+                <Typography sx={{ fontFamily: 'Poppins' }}>{cannot}</Typography>
+              </ListItem>
+            ))}
+          </List>
+          <CannotBeADonorDialog />
+        </Box>
+      </CustomBox>
+      <CustomBox>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'left',
+            alignItems: 'left',
+            my: 10
+          }}
+        >
+          <CustomHeader headerText="What is after blood donation?" />
+          <Typography variant="body2">
             <List
               sx={{
                 ml: 3,
-                mb: 3,
                 listStyleType: 'disc',
                 '& .MuiListItem-root': {
                   display: 'list-item'
                 }
               }}
             >
-              {whoCannotBeADonorShort.map((cannot) => (
+              {afterBloodDonation.map((after) => (
                 <ListItem>
-                  <DesctriptionText>{cannot}</DesctriptionText>
+                  <Typography>{after}</Typography>
                 </ListItem>
               ))}
             </List>
-            <CannotBeADonorDialog />
-          </Box>
-        </CustomBox>
-        <CustomBox>
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'left',
-              alignItems: 'left',
-              my: 10
-            }}
-          >
-            <TitleText variant="h3">A po oddaniu krwi...</TitleText>
-            <DesctriptionText variant="body2">
-              <List
-                sx={{
-                  ml: 3,
-                  mb: 3,
-                  listStyleType: 'disc',
-                  '& .MuiListItem-root': {
-                    display: 'list-item'
-                  }
-                }}
-              >
-                {afterBloodDonation.map((after) => (
-                  <ListItem>
-                    <DesctriptionText>{after}</DesctriptionText>
-                  </ListItem>
-                ))}
-              </List>
-            </DesctriptionText>
-          </Box>
-          <Box sx={{ width: '400px' }}>
-            <Img src={chocolateImage} alt="chocolateImage" />
-          </Box>
-        </CustomBox>
-      </Container>
-      <Box sx={{ backgroundColor: '#E6F0FF' }}>
-        <Footer />
+          </Typography>
+        </Box>
+        <CustomQuote quoteText="Have a chocolate and meet other donors!" />
+      </CustomBox>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'left',
+          alignItems: 'center',
+          mt: '40px'
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: 'Poppins',
+            fontSize: '26px',
+            mb: 2,
+            color: '#CC2936'
+          }}
+        >
+          If You have any other questions about a dontation - text or call us!
+        </Typography>
+        <CustomQuote quoteText="Become a donor today!" />
       </Box>
-    </Box>
+      <Footer />
+    </>
   );
 };
 
