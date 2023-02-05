@@ -1,23 +1,21 @@
 {
   "files": {
     "main.css": "/Blood-Donation/static/css/main.49d691bd.css",
-    "main.js": "/Blood-Donation/static/js/main.51bea88d.js",
+    "main.js": "/Blood-Donation/static/js/main.4534a7e9.js",
     "static/media/bannerImage.jpg": "/Blood-Donation/static/media/bannerImage.371ae151fd1348e2f7f1.jpg",
     "static/media/happyPerson.png": "/Blood-Donation/static/media/happyPerson.2a533e75f72574f6cc88.png",
-    "static/media/chocolateImage.jpg": "/Blood-Donation/static/media/chocolateImage.fb4ec6ac45b0209add43.jpg",
     "static/media/bloodTypes.jpg": "/Blood-Donation/static/media/bloodTypes.f2249b856b761ff1b73c.jpg",
     "static/media/Poppins-Regular.ttf": "/Blood-Donation/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Bold.ttf": "/Blood-Donation/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
-    "static/media/Lifesavers.png": "/Blood-Donation/static/media/Lifesavers.c982a1bedfac60f96ce5.png",
     "static/media/Avatar-2.png": "/Blood-Donation/static/media/Avatar-2.d3d2c1c9bf4a7a919b5e.png",
     "static/media/Avatar-3.png": "/Blood-Donation/static/media/Avatar-3.cf2a57bcd6e996aaeebf.png",
     "static/media/Avatar-1.png": "/Blood-Donation/static/media/Avatar-1.f9fd199f157a444cd572.png",
     "index.html": "/Blood-Donation/index.html",
     "main.49d691bd.css.map": "/Blood-Donation/static/css/main.49d691bd.css.map",
-    "main.51bea88d.js.map": "/Blood-Donation/static/js/main.51bea88d.js.map"
+    "main.4534a7e9.js.map": "/Blood-Donation/static/js/main.4534a7e9.js.map"
   },
   "entrypoints": [
     "static/css/main.49d691bd.css",
-    "static/js/main.51bea88d.js"
+    "static/js/main.4534a7e9.js"
   ]
 }
