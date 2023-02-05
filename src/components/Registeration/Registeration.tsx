@@ -22,7 +22,7 @@ function Copyright() {
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://kinga-kus.github.io/Blood-Donation/">
-        Your Website
+        Blood Donation Center
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

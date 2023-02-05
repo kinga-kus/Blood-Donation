@@ -20,15 +20,12 @@ const CustomContainer = styled(Container)(({ theme }) => ({
 const FooterLabels = [
   {
     header: 'About Us',
-    links: [
-      { link: 'Departments', path: '/Blood-Donation/departments' },
-      { link: 'Map', path: '/Blood-Donation/#map' }
-    ]
+    links: [{ link: 'Departments', path: '/Blood-Donation/departments' }]
   },
   {
     header: 'News',
     links: [
-      { link: 'Events', path: '/Blood-Donation/#actual-events' },
+      { link: 'Events', path: '/Blood-Donation#actual-events' },
       { link: 'Gallery', path: '/Blood-Donation/gallery' }
     ]
   },
@@ -36,8 +33,7 @@ const FooterLabels = [
     header: 'Blood Donors',
     links: [
       { link: 'Registeration', path: '/Blood-Donation/registeration' },
-      { link: 'Information', path: '/Blood-Donation/information' },
-      { link: 'Questions', path: '/Blood-Donation/questions' }
+      { link: 'Information', path: '/Blood-Donation/information' }
     ]
   }
 ];
@@ -73,12 +69,12 @@ const Footer = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                   {label.links.map((subcategory) => (
-                    <Link
+                    <HashLink
                       to={subcategory.path}
                       style={{ textDecoration: 'none' }}
                     >
                       <FooterItem>{subcategory.link}</FooterItem>
-                    </Link>
+                    </HashLink>
                   ))}
                 </Box>
               </Box>
@@ -89,7 +85,6 @@ const Footer = () => {
       <Routes>
         <Route path="/departments" element={<Departments />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/questions" element={<Questions />} />
         <Route path="/registeration" element={<RegisterSteps />} />
       </Routes>
     </>
