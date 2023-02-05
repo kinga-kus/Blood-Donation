@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Link as RegisterationLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 import {
   Container,
   Box,
   styled,
-  Link,
   AppBar,
   Toolbar,
   Button,
@@ -17,14 +18,14 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import BloodtypeIcon from '@mui/icons-material/Bloodtype';
 
-import Operation from '../Registeration/Registeration';
+import Registeration from '../Registeration/Registeration';
 import WhyWorth from './WhyWorth';
 
 const pages = [
-  { label: 'Home', path: '/Blood-Donation' },
-  { label: 'About Us', path: '/Blood-Donation/#mission' },
+  { label: 'Home', path: '/Blood-Donation#home' },
+  { label: 'About Us', path: '/Blood-Donation#mission' },
   { label: 'Information', path: '/Blood-Donation/information' },
-  { label: 'Contact', path: '/Blood-Donation/#contact' }
+  { label: 'Contact', path: '/Blood-Donation#contact' }
 ];
 
 const NavbarLinksBox = styled(Box)(({ theme }) => ({
@@ -89,21 +90,19 @@ const Navbar = () => {
                 sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
               />
               <Typography
-                variant="h6"
                 noWrap
                 component="a"
-                href="/"
+                href="/Blood-Donation"
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },
-                  fontFamily: 'monospace',
+                  fontFamily: 'Poppins',
                   fontWeight: 700,
-                  letterSpacing: '.3rem',
                   color: 'inherit',
                   textDecoration: 'none'
                 }}
               >
-                LOGO
+                Blood Donation
               </Typography>
               <Box
                 sx={{
@@ -141,14 +140,13 @@ const Navbar = () => {
                 >
                   {pages.map((page) => (
                     <MenuItem>
-                      <Link
-                        href={page.path}
-                        underline="none"
-                        variant="body2"
-                        sx={{ color: '#08415C' }}
+                      <HashLink
+                        smooth
+                        to={page.path}
+                        style={{ textDecoration: 'none' }}
                       >
                         {page.label}
-                      </Link>
+                      </HashLink>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -175,9 +173,17 @@ const Navbar = () => {
                 sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
               >
                 {pages.map((page) => (
-                  <NavLink href={page.path} underline="none" variant="body2">
+                  <HashLink
+                    smooth
+                    to={page.path}
+                    style={{
+                      textDecoration: 'none',
+                      color: '#EEE5E9',
+                      fontFamily: 'Poppins'
+                    }}
+                  >
                     {page.label}
-                  </NavLink>
+                  </HashLink>
                 ))}
               </NavbarLinksBox>
               <Box
@@ -188,10 +194,7 @@ const Navbar = () => {
                   gap: '1rem'
                 }}
               >
-                <RegisterationLink
-                  to="/rejestracja"
-                  style={{ textDecoration: 'none' }}
-                >
+                <Link to="/registeration" style={{ textDecoration: 'none' }}>
                   <Button
                     variant="outlined"
                     sx={{
@@ -211,15 +214,15 @@ const Navbar = () => {
                   >
                     Become a donor
                   </Button>
-                </RegisterationLink>
+                </Link>
               </Box>
             </StyledToolbar>
           </Container>
         </AppBar>
       </CustomContainer>
       <Routes>
-        <Route path="/rejestracja" element={<Operation />} />
-        <Route path="/informacje" element={<WhyWorth />} />
+        <Route path="/registeration" element={<Registeration />} />
+        <Route path="/information" element={<WhyWorth />} />
       </Routes>
     </>
   );

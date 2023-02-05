@@ -72,7 +72,7 @@ const CustomContactBox = styled(Box)(({ theme }) => ({
 
 const Contact = () => {
   return (
-    <CustomBox>
+    <CustomBox id="contact">
       <CustomHeader headerText="Contact Us" />
       <Box
         sx={{

@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, styled, Link, Button } from '@mui/material';
 import CustomButton from '../CustomButton';
 import bannerImage from '../../assets/bannerImage.jpg';
+import { HashLink } from 'react-router-hash-link';
 
 const BannerContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -51,7 +52,7 @@ const BannerImage = styled('img')(({ theme }) => ({
 
 const Banner = () => {
   return (
-    <BannerContainer>
+    <BannerContainer id="home">
       <BannerContent>
         <Typography variant="h6">Welcome...</Typography>
         <BannerTitle variant="h2" sx={{ lineHeight: '96px' }}>
@@ -61,16 +62,21 @@ const Banner = () => {
           You can save many lives - become a blood donor. It's free, all you
           need is willingness!
         </BannerDescription>
-        <Link
-          href="/Blood-Donation/#mission"
-          style={{ textDecoration: 'none' }}
+        <HashLink
+          smooth
+          to={'/Blood-Donation#mission'}
+          style={{
+            textDecoration: 'none',
+            color: '#EEE5E9',
+            fontFamily: 'Poppins'
+          }}
         >
           <CustomButton
             backgroundColor="#CC2936"
             color="#fff"
-            buttonText="Więcej"
+            buttonText="More"
           />
-        </Link>
+        </HashLink>
       </BannerContent>
       <Box>
         <BannerImage src={bannerImage} />
